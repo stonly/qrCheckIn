@@ -43,13 +43,12 @@ on scanned_code(code)
 				scanned_code(guestEmail)
 			end if
 		else
-			logCheckin(code)
 			display dialog ("Checked In Successfully! 
-
  Welcome, " & guestName) buttons {"Ok"} default button 1
 			-- Optionally close the dialog automatically
 			-- do shell script "sleep 2"
 			-- tell application "System Events" to keystroke return
+			logCheckin(code)
 		end if
 		
 	else
